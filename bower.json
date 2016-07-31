@@ -1,21 +1,23 @@
 {
-    "name": "angular-fc-fileuploader",
-    "description": "AngularJS Directive for upload files from the front side",
-    "main": "index.html",
-    "authors": [
-        "TwisterMW <marc.hernandez@twiscript.com>"
-    ],
-    "license": "MIT",
-    "homepage": "https://github.com/TwisterMW/angular-fc-fileuploader",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "devDependencies": {
-        "jquery": "^3.1.0",
-        "bootstrap": "^3.3.7"
-    }
+  "name": "angular-fc-fileuploader",
+  "description": "AngularJS Directive for upload files from the front side",
+  "main": "index.html",
+  "authors": [
+    "TwisterMW <marc.hernandez@twiscript.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/TwisterMW/angular-fc-fileuploader",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7",
+    "angular": "angularjs#^1.5.8",
+    "angular-route": "^1.5.8"
+  }
 }
