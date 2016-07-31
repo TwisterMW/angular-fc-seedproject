@@ -11,20 +11,9 @@ module.exports = function(grunt){
 			},
 			target: {
 				files: {
-				  'dist/css/styles.css': ['bower_components/bootstrap/dist/css/bootstrap.min.css', 'assets/css/override.css']
+				  'dist/css/styles.min.css': ['bower_components/bootstrap/dist/css/bootstrap.min.css', 'assets/css/override.css']
 				}
 			}
-		},
-
-  		concat: {
-			'./tmp/concat/js/scripts.js': [
-				'bower_components/jquery/dist/jquery.min.js',
-				'bower_components/bootstrap/dist/js/bootstrap.min.js',
-				'assets/libs/angularjs/angular.min.js',
-				'assets/libs/angularjs/angular-route.min.js',
-				'app/app.routes.js',
-				'app/controllers/mainCtrl.js'
-			],
 		},
 
 		open: {
@@ -51,51 +40,35 @@ module.exports = function(grunt){
 
         ngmin: {
             dist: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '.tmp/concat/js',
-                        src: '*.js',
-                        dest: 'js/scripts.js'
-                    }
-                ]
-            }
+	            src: [
+  					'bower_components/jquery/dist/jquery.min.js',
+					'bower_components/bootstrap/dist/js/bootstrap.min.js',
+					'bower_components/angular/angular.min.js',
+					'bower_components/angular-route/angular-route.min.js',
+					'app/app.routes.js',
+					'app/controllers/mainCtrl.js'
+  				],
+	            dest: 'dist/js/scripts.min.js'
+           	}
         },
-
-        uglify: {
-	        options: {
-	            report: 'min',
-	            mangle: false
-	        }
-	    },
 
 	    serve: {
 	        options: {
 	            port: 9000
-	        },
-	        'aliases': {
-	        	'scripts.js': {
-	        		'output': 'scripts.js'
-	        	},
-	        	'styles.css': {
-	        		'output': 'styles.css'
-	        	}
 	        }
     	}
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-ngmin');
     grunt.loadNpmTasks('grunt-usemin');
     grunt.loadNpmTasks('grunt-open');
     grunt.loadNpmTasks('grunt-serve');
 
     grunt.registerTask('server', [
-        'copy', 'useminPrepare', 'concat', 'ngmin', 'uglify', 'cssmin', 'usemin', 'open:dev', 'serve'
+        'clean', 'copy', 'useminPrepare', 'ngmin', 'cssmin', 'usemin', 'open', 'serve'
     ]);
 
 };
