@@ -32,6 +32,8 @@ If we take a look at Gruntfile.js we can see that grunt 'server' task is compose
 
 - 'cssmin': This tasks merges all CSS stylesheets in one file and compress it.
 
+- 'cachebreaker': This tasks adds a hash at the end of css & js files for preventing cache resolution problems on develop stage.
+
 - 'open': This tasks run Chrome application pointing server mocked URL.
 	
 	- ':dev': This subtask of 'open' is ran for display the URL of application.
