@@ -7,7 +7,7 @@ AngularJS Seed Project generator for start to develop an application based on An
 3. Chrome (for grunt open task)
 
 ## Installation
-- Clone repo from: [GitHub](https://github.com/TwisterMW/angular-fc-fileuploader.git)
+- Clone repo from: [GitHub](https://github.com/TwisterMW/angular-fc-seedproject.git)
 - Do a npm install & bower install:
 	```
 	$ npm install
