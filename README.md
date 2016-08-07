@@ -19,7 +19,7 @@ AngularJS Directive for uploading files on the front end side.
 	$ grunt server
 	```
 
-## How it works
+## Looking on Grunt subtasks
 If we take a look at Gruntfile.js we can see that grunt 'server' task is composed by several subtasks. Each one will be explained below:
 
 - 'clean': This task do a cleaning of all generated files at the end of server running.
