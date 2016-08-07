@@ -1,5 +1,4 @@
 module.exports = function(grunt){
-
   	// Project configuration.
 	grunt.initConfig({
   		clean: ["dist", "docs"],
@@ -27,19 +26,28 @@ module.exports = function(grunt){
             }
 		},
 
-        copy: {
-            main: {
-                src: 'index.html',
-                dest: 'dist/index.html'
+        cachebreaker: {
+            dev: {
+                options: {
+                    match: ['scripts.min.js', 'styles.min.css'],
+                    replacement: 'md5',
+                    src: {
+                        path: 'dist/js/scripts.min.js'
+                    }
+                },
+                files: {
+                    src: ['dist/index.html']
+                }
             }
         },
 
-        useminPrepare: {
-            html: 'dist/index.html'
-        },
-
-        usemin: {
-            html: ['dist/index.html']
+        copy: {
+            main: {
+                files: [
+                    { src: 'index.html', dest: 'dist/index.html' },
+                    { src: 'favicon.png', dest: 'dist/favicon.png' }
+                ]
+            }
         },
 
         ngdocs: {
@@ -67,17 +75,17 @@ module.exports = function(grunt){
     	}
     });
 
+    grunt.loadNpmTasks('grunt-open');
+    grunt.loadNpmTasks('grunt-ngmin');
+    grunt.loadNpmTasks('grunt-serve');
     grunt.loadNpmTasks('grunt-ngdocs');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-cache-breaker');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-ngmin');
-    grunt.loadNpmTasks('grunt-usemin');
-    grunt.loadNpmTasks('grunt-open');
-    grunt.loadNpmTasks('grunt-serve');
 
     grunt.registerTask('server', [
-        'clean', 'copy', 'useminPrepare', 'ngdocs', 'ngmin', 'cssmin', 'usemin', 'open:dev', 'open:docs', 'serve'
+        'clean', 'copy', 'ngdocs', 'ngmin', 'cssmin', 'cachebreaker', 'open:dev', 'open:docs', 'serve'
     ]);
 
 };
