@@ -2,7 +2,7 @@ module.exports = function(grunt){
 
   	// Project configuration.
 	grunt.initConfig({
-  		clean: ["dist"],
+  		clean: ["dist", "docs"],
 
   		cssmin: {
 			options: {
@@ -20,7 +20,11 @@ module.exports = function(grunt){
 		    dev: {
 			    path: 'http://localhost:9000/dist/index.html',
 		      	app: 'chrome'
-		    }
+		    },
+            docs: {
+                path: 'http://localhost:9000/docs/index.html',
+                app: 'chrome'
+            }
 		},
 
         copy: {
@@ -36,6 +40,10 @@ module.exports = function(grunt){
 
         usemin: {
             html: ['dist/index.html']
+        },
+
+        ngdocs: {
+          all: ['app/**/*.js']
         },
 
         ngmin: {
@@ -59,6 +67,7 @@ module.exports = function(grunt){
     	}
     });
 
+    grunt.loadNpmTasks('grunt-ngdocs');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -68,7 +77,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-serve');
 
     grunt.registerTask('server', [
-        'clean', 'copy', 'useminPrepare', 'ngmin', 'cssmin', 'usemin', 'open', 'serve'
+        'clean', 'copy', 'useminPrepare', 'ngdocs', 'ngmin', 'cssmin', 'usemin', 'open:dev', 'open:docs', 'serve'
     ]);
 
 };
