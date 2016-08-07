@@ -7,7 +7,7 @@ AngularJS Seed Project generator for start to develop an application based on An
 3. Chrome (for grunt open task)
 
 ## Installation
-- Clone repo from: [GitHub](https://github.com/TwisterMW/angular-fc-fileuploader.git)
+- Clone repo from: [GitHub](https://github.com/TwisterMW/angular-fc-seedproject.git)
 - Do a npm install & bower install:
 	```
 	$ npm install
@@ -35,7 +35,7 @@ If we take a look at Gruntfile.js we can see that grunt 'server' task is compose
 - 'cachebreaker': This tasks adds a hash at the end of css & js files for preventing cache resolution problems on develop stage.
 
 - 'open': This tasks run Chrome application pointing server mocked URL.
-	
+
 	- ':dev': This subtask of 'open' is ran for display the URL of application.
 	
 	- ':docs': This subtaks of 'open' is ran for display the URL of documentation.
