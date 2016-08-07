@@ -11,7 +11,7 @@ AngularJS Seed Project generator for start to develop an application based on An
 - Do a npm install & bower install:
 	```
 	$ npm install
-	
+
 	$ bower install
 	```
 - When all the packages and dependences are downloaded you can run the demo by grunt task:
