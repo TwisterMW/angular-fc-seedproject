@@ -1,5 +1,5 @@
-# AngularJS fc file upload directive
-AngularJS Directive for uploading files on the front end side.
+# AngularJS Seed Project
+AngularJS Seed Project generator for start to develop an application based on Angular and Bootstrap technologies for the front side.
 
 ## Requirements
 1. NodeJS (version used 5.5.0)
