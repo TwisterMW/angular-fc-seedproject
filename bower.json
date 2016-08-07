@@ -1,18 +1,20 @@
 {
-  "name": "angular-fc-fileuploader",
-  "description": "AngularJS Directive for upload files from the front side",
+  "name": "angular-fc-seedproject",
+  "description": "AngularJS Seed Project generator for start to develop an application based on Angular and Bootstrap technologies for the front side.",
   "main": "index.html",
   "authors": [
     "TwisterMW <marc.hernandez@twiscript.com>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/TwisterMW/angular-fc-fileuploader",
+  "homepage": "https://github.com/TwisterMW/angular-fc-seedproject",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "dist/",
+    "docs/"
   ],
   "devDependencies": {
     "jquery": "^3.1.0",
