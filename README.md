@@ -32,15 +32,15 @@ If we take a look at Gruntfile.js we can see three tasks for run. Those tasks wi
 2. ```$ grunt release```:
 	It automaticaly clean previous generated release version, inject the dependencies, creates a distribution directory, it compress all source files and merges it into one and establishes a connection to server on port 9001 (by default). It's composed by six subtasks:
 
-		- $ grunt clean:all: Task that cleans a list of directories.
-		- $ grunt wiredep: Task in charge of dependency injection based on bower.json definition.
-		- $ grunt copy:main: Task that copies index.html and favicon files to root distribution folder.
-		- $ grunt compress: Custom task implementing 'useminPrepare', 'concat', 'uglify:dev', 'cssmin:minify', 'usemin' for minifying and 	compressing all CSS / JS source
-		- $ grunt clean:temp: This task removes previous temporary generated files by 'compress' task.
-		- $ grunt connect:dist: It opens a server on port 9001 (by default in that case).
+	- $ grunt clean:all: Task that cleans a list of directories.
+	- $ grunt wiredep: Task in charge of dependency injection based on bower.json definition.
+	- $ grunt copy:main: Task that copies index.html and favicon files to root distribution folder.
+	- $ grunt compress: Custom task implementing 'useminPrepare', 'concat', 'uglify:dev', 'cssmin:minify', 'usemin' for minifying and 	compressing all CSS / JS source
+	- $ grunt clean:temp: This task removes previous temporary generated files by 'compress' task.
+	- $ grunt connect:dist: It opens a server on port 9001 (by default in that case).
 
 3. ```$ grunt docs```:
 	It automatically generates a documentation api and launches it on browser connected to server on port 9002. It's composed by two tasks:
 
-		- $ grunt ngdocs: This tasks automatically generate a directory called 'docs' with a local website for displaying the documentation of the app source.
-		- $ grunt connect:docs: It opens a server on port 9002 (by default in that case).
+	- $ grunt ngdocs: This tasks automatically generate a directory called 'docs' with a local website for displaying the documentation of the app source.
+	- $ grunt connect:docs: It opens a server on port 9002 (by default in that case).
