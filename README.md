@@ -25,9 +25,9 @@ If we take a look at Gruntfile.js we can see three tasks for run. Those tasks wi
 1. ```$ grunt server```:
 	It automatically inject dependences on base file, runs a mocked server on port 9000 (by default) and start watching for JS errors during develop. It's composed by three subtasks which are:
 
-		- $ grunt wiredep: Task in charge of dependency injection based on bower.json definition.
-		- $ grunt connect:dev: Task that start a server on custom port (9000 by default in that case).
-		- $ grunt jslinter: Custom task extending watch task implementing jshint for detecting JS errors during development.
+	- $ grunt wiredep: Task in charge of dependency injection based on bower.json definition.
+	- $ grunt connect:dev: Task that start a server on custom port (9000 by default in that case).
+	- $ grunt jslinter: Custom task extending watch task implementing jshint for detecting JS errors during development.
 
 2. ```$ grunt release```:
 	It automaticaly clean previous generated release version, inject the dependencies, creates a distribution directory, it compress all source files and merges it into one and establishes a connection to server on port 9001 (by default). It's composed by six subtasks:
