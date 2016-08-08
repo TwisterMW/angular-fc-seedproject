@@ -14,12 +14,14 @@
     "test",
     "tests",
     "dist/",
-    "docs/"
+    "docs/",
+    ".tmp"
   ],
-  "devDependencies": {
-    "jquery": "^3.1.0",
+  "dependencies": {
+    "jquery": "^2.2.4",
     "bootstrap": "^3.3.7",
-    "angular": "angularjs#^1.5.8",
-    "angular-route": "^1.5.8"
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "bootstrap-css": "^3.3.6"
   }
 }
