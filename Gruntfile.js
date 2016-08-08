@@ -114,7 +114,6 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-usemin');
     grunt.loadNpmTasks('grunt-ngdocs');
     grunt.loadNpmTasks('grunt-wiredep');
-    grunt.loadNpmTasks('grunt-filerev');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
