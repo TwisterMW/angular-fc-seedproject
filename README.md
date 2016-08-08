@@ -20,24 +20,24 @@ AngularJS Seed Project generator for start to develop an application based on An
 	```
 
 ## Looking on Grunt subtasks
-If we take a look at Gruntfile.js we can see that grunt 'server' task is composed by several subtasks. Each one will be explained below:
+If we take a look at Gruntfile.js we can see three tasks for run. Those tasks will be explained below
 
-- 'clean': This task do a cleaning of all generated files at the end of server running.
+1. $ grunt server:
+	It automatically inject dependences on base file, runs a mocked server on port 9000 (by default) and start watching for JS errors during develop. It's composed by three subtasks which are:
+		- $ grunt wiredep: Task in charge of dependency injection based on bower.json definition.
+		- $ grunt connect:dev: Task that start a server on custom port (9000 by default in that case).
+		- $ grunt jslinter: Custom task extending watch task implementing jshint for detecting JS errors during development.
 
-- 'copy': This task copies the index.html file to the dist directory that will be generated for display the web result on a server.
+2. $ grunt release:
+	It automaticaly clean previous generated release version, inject the dependencies, creates a distribution directory, it compress all source files and merges it into one and establishes a connection to server on port 9001 (by default). It's composed by six subtasks:
+		- $ grunt clean:all: Task that cleans a list of directories.
+		- $ grunt wiredep: Task in charge of dependency injection based on bower.json definition.
+		- $ grunt copy:main: Task that copies index.html and favicon files to root distribution folder.
+		- $ grunt compress: Custom task implementing 'useminPrepare', 'concat', 'uglify:dev', 'cssmin:minify', 'usemin' for minifying and 	compressing all CSS / JS source
+		- $ grunt clean:temp: This task removes previous temporary generated files by 'compress' task.
+		- $ grunt connect:dist: It opens a server on port 9001 (by default in that case).
 
-- 'ngdocs': This tasks automatically generate a directory called 'docs' with a local website for displaying the documentation of the app source.
-
-- 'ngmin': This task merges all JS source in one file and compress it.
-
-- 'cssmin': This tasks merges all CSS stylesheets in one file and compress it.
-
-- 'cachebreaker': This tasks adds a hash at the end of css & js files for preventing cache resolution problems on develop stage.
-
-- 'open': This tasks run Chrome application pointing server mocked URL.
-
-	- ':dev': This subtask of 'open' is ran for display the URL of application.
-
-	- ':docs': This subtaks of 'open' is ran for display the URL of documentation.
-
-- 'serve': This task mocks a server on port :9000
+3. $ grunt docs:
+	It automatically generates a documentation api and launches it on browser connected to server on port 9002. It's composed by two tasks:
+		- $ grunt ngdocs: This tasks automatically generate a directory called 'docs' with a local website for displaying the documentation of the app source.
+		- $ grunt connect:docs: It opens a server on port 9002 (by default in that case).
