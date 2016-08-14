@@ -44,3 +44,11 @@ If we take a look at Gruntfile.js we can see three tasks for run. Those tasks wi
 
 	- $ grunt ngdocs: This tasks automatically generate a directory called 'docs' with a local website for displaying the documentation of the app source.
 	- $ grunt connect:docs: It opens a server on port 9002 (by default in that case).
+
+## Generating AngularJS components with yeoman
+If we look at package.json file we can see the last dependency "twistermw-angular-component-generator": "^1.1.0-1".
+This NPM Package is also developed by me and you can follow the repo here [GitHub](https://github.com/TwisterMW/angular-generator/)
+
+If we run at console this command: ```$ yo angular-component``` we'll be asked for a folder to deploy the generated components (in that case we should put 'app'). The next step is choose the module name, and finally we can select all kind of angular files to be generated using the data inputed before.
+
+`**NOTE:** If you create diferent modules for each component that you generate, you must include the module dependency on 'app/app.routes.js' file.`
