@@ -13,7 +13,7 @@
 
 		// Definition
 		function init(){
-
+			return 2+2;
 		}
 
 		vm.init();
