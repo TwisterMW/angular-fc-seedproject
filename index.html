@@ -10,13 +10,21 @@
 	<!-- endbower -->
 	<!-- endbuild -->
 </head>
-<body data-ng-controller="{{ yourControllerName }} as {{ yourAlias }}">
+<body data-ng-controller="mainController as vm">
 	
 
 	<!-- build:js js/app.js -->
 	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script>
 	<!-- endbower -->
 	<!-- include: "type": "js", "files": "app/**/**/*.js" -->
+	<script src="app/app.routes.js"></script>
+	<script src="app/components/main/main-controller.js"></script>
+	<script src="app/components/main/main-service.js"></script>
 	<!-- /include -->
 	<!-- endbuild -->
 </body>

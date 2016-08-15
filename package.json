@@ -1,6 +1,14 @@
 {
   "name": "angular-fc-seedproject",
   "version": "0.5.0",
+  "dependencies": {
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "jasmine-core": "^2.4.1",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "angular-mocks": "^1.5.8"
+  },
   "devDependencies": {
     "bower": "^1.7.9",
     "grunt": "^0.4.5",
@@ -16,6 +24,12 @@
     "grunt-ngdocs": "^0.2.10",
     "grunt-usemin": "^3.1.1",
     "grunt-wiredep": "^3.0.1",
-    "twistermw-angular-component-generator": "^1.1.0-1"
+    "twistermw-angular-component-generator": "^1.1.0-1",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "jasmine-core": "^2.4.1",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "angular-mocks": "^1.5.8"
   }
 }
