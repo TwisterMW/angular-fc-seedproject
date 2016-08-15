@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/TwisterMW/angular-fc-seedproject.svg?branch=master)](https://travis-ci.org/TwisterMW/angular-fc-seedproject)
+
 # AngularJS Seed Project
 AngularJS Seed Project generator for start to develop an application based on Angular and Bootstrap technologies for the front side.
 
