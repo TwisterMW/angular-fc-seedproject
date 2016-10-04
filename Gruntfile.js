@@ -95,7 +95,7 @@ module.exports = function(grunt){
             },
             coverage:{
                 options: {
-                    port: 9001,
+                    port: 9003,
                     base: 'coverage/report/',
                     open: true,
                     keepalive: true
