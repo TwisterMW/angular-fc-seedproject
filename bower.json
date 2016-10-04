@@ -11,8 +11,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests",
+    "tests/",
     "dist/",
     "docs/",
     ".tmp"
@@ -22,6 +21,7 @@
     "bootstrap": "^3.3.7",
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
+    "angular-mocks": "^1.5.8",
     "bootstrap-css": "^3.3.6"
   }
 }
